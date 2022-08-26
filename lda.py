@@ -7,7 +7,7 @@ import gensim.models
 import matplotlib.pyplot as plt
 import pandas as pd
 import spacy
-from spacy.tokenizer import Tokenizer
+from spacy.tokenizer import Tokenizer  # some IDEs may show a warning here, although this works fine
 from gensim.models import CoherenceModel
 from stop_words import get_stop_words
 import pyLDAvis.gensim_models
