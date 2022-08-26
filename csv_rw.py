@@ -3,7 +3,7 @@ import pandas as pd
 
 def read(path: str, sep='\t') -> pd.DataFrame:
     """
-    Read a csv/tsv/etc. file as a dataframe with a custom delimiter and print its contents
+    Read a .csv/.tsv/etc. file as a dataframe with a custom delimiter and print its contents
 
     :param path: Path to the file
     :param sep: Delimiter, a horizontal tab by default
@@ -18,7 +18,7 @@ def read(path: str, sep='\t') -> pd.DataFrame:
 
 def write(df: pd.DataFrame, path: str, sep='\t'):
     """
-    Write a dataframe to a csv/tsv/etc. file with a custom delimiter
+    Write a dataframe to a .csv/.tsv/etc. file with a custom delimiter
 
     :param df: pandas DataFrame
     :param path: Path to the file
