@@ -1,15 +1,28 @@
 import pandas as pd
 
 
-def read(filename, sep='\t'):
-    # Read a csv file to a dataframe with custom delimiter
-    df = pd.read_csv(filename, sep=sep, on_bad_lines='skip', engine="python")
+def read(path: str, sep='\t') -> pd.DataFrame:
+    """
+    Read a csv/tsv/etc. file as a dataframe with a custom delimiter and print its contents
+
+    :param path: Path to the file
+    :param sep: Delimiter, a horizontal tab by default
+    :return: pandas DataFrame
+    """
+
+    df = pd.read_csv(path, sep=sep, on_bad_lines='skip', engine="python")
     print('Contents of Dataframe: ')
     print(df)
     return df
 
 
-def write(df: pd.DataFrame, filename, sep='\t'):
-    # Write a dataframe to a csv file with custom delimiter
-    df.to_csv(filename, sep=sep, index=False)
-    # print('File written successfully')
+def write(df: pd.DataFrame, path: str, sep='\t'):
+    """
+    Write a dataframe to a csv/tsv/etc. file with a custom delimiter
+
+    :param df: pandas DataFrame
+    :param path: Path to the file
+    :param sep: Delimiter, a horizontal tab by default
+    """
+
+    df.to_csv(path, sep=sep, index=False)
